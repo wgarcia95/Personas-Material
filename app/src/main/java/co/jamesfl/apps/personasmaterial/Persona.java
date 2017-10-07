@@ -19,6 +19,14 @@ public class Persona {
         this.sexo=sexo;
     }
 
+    public Persona(int foto, String nombre, String apellido) {
+        this.foto = foto;
+        this.cedula = "";
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.sexo = 0;
+    }
+
     public int getSexo() {
         return sexo;
     }

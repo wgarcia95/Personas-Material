@@ -6,6 +6,7 @@
     android:id="@+id/lst_options"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="5dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="co.jamesfl.apps.personasmaterial.Principal"
     tools:layout_editor_absoluteX="8dp"
