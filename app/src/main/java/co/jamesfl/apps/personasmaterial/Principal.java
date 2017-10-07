@@ -1,5 +1,6 @@
 package co.jamesfl.apps.personasmaterial;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -21,6 +22,7 @@ public class Principal extends AppCompatActivity {
     private Resources res;
     private AdaptadorPersona adapter;
     private LinearLayoutManager llm;
+    private Intent intent;
 
 
     @Override
@@ -51,8 +53,8 @@ public class Principal extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                intent = new Intent(Principal.this, CrearPersona.class);
+                startActivity(intent);
             }
         });
     }

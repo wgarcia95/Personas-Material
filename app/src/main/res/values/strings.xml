@@ -6,4 +6,6 @@
     <string name="apellido">Apellido</string>
     <string name="guardar">Guardar</string>
     <string name="limpiar">Limpiar</string>
+
+    <string name="msjguardado">Persona Agregada</string>
 </resources>
