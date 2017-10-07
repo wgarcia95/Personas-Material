@@ -3,6 +3,7 @@ package co.jamesfl.apps.personasmaterial;
 import android.content.res.Resources;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 public class CrearPersona extends AppCompatActivity {
 
     private EditText cajaNombre, cajaApellido;
-    private TextInputEditText icajaNombre, icajaApellido;
+    private TextInputLayout icajaNombre, icajaApellido;
     private ArrayList<Integer> fotos;
     private Resources res;
     @Override
@@ -31,8 +32,8 @@ public class CrearPersona extends AppCompatActivity {
         cajaNombre = (EditText)findViewById(R.id.txtNombre);
         cajaApellido = (EditText)findViewById(R.id.txtApellido);
 
-        icajaNombre = (TextInputEditText)findViewById(R.id.cajaNombre);
-        icajaApellido = (TextInputEditText)findViewById(R.id.cajaApellido);
+        icajaNombre = (TextInputLayout)findViewById(R.id.cajaNombre);
+        icajaApellido = (TextInputLayout)findViewById(R.id.cajaApellido);
     }
 
     public void guardar(View v){
@@ -41,8 +42,17 @@ public class CrearPersona extends AppCompatActivity {
         apellido = cajaApellido.getText().toString();
         Persona p = new Persona(metodos.fotoAleatoria(fotos), nombre, apellido);
         p.guardar();
-
         Snackbar.make(v, res.getString(R.string.msjguardado), Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+        limpiar();
+    }
 
+    public void limpiar(View v){
+        limpiar();
+    }
+
+    private void limpiar(){
+        cajaNombre.setText("");
+        cajaApellido.setText("");
+        cajaNombre.requestFocus();
     }
 }

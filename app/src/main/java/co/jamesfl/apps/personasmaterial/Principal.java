@@ -35,10 +35,11 @@ public class Principal extends AppCompatActivity {
         listado = (RecyclerView)findViewById(R.id.lst_options);
 
         res = this.getResources();
-        personas = new ArrayList<>();
+        /*personas = new ArrayList<>();
         personas.add(new Persona(R.drawable.carro1,"Juan", "Perez"));
         personas.add(new Persona(R.drawable.carro2,"Pedro", "Cantillo"));
-        personas.add(new Persona(R.drawable.carro3,"Camilo", "Rodriguez"));
+        personas.add(new Persona(R.drawable.carro3,"Camilo", "Rodriguez"));*/
+        personas = Datos.obtenerPersonas();
 
         llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
